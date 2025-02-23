@@ -45,6 +45,9 @@ app.post('/api/shopify/shipping', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
+app.post('/api/shopify/shipping', async (req, res) => {
+    console.log("🚀 Received request from Shopify:");
+    console.log(JSON.stringify(req.body, null, 2)); // Logs the exact request
 
 // POST route for shipping rates
 app.post('/api/shopify/shipping', async (req, res) => {
